@@ -1,0 +1,11 @@
+
+div {overflow-x:auto;}
+table {
+	border-collapse: collapse;
+	border-spacing: 0em;
+	width: 100%;
+	margin-left: auto;
+     margin-right: auto;
+	overflow-x: scroll;
+	margin-top: 1em;
+}

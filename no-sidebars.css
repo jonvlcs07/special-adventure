@@ -1,0 +1,109 @@
+/* default, collapse and hover colors */
+
+/* from California Coast theme > main css > Default ribbon sidedock icons section */
+/* https://github.com/mgmeyers/obsidian-california-coast-theme/blob/main/src/010-main.css#L2645 */
+/* cleaned up from most (potentially too much) things */
+
+ /* hide the left sidebar, and reclaim the space it was occupying */
+
+.titlebar {display: none;
+           padding-top: 0px;
+           width: 0px;}
+
+.is-frameless {
+  padding-top:0px !important;
+}  
+
+
+
+.workspace-ribbon.mod-left {width:0px;}
+.workspace-split.mod-left-split {margin-left: 0px;} 
+.workspace-ribbon.mod-left.is-collapsed {
+  display: none;
+  width:0px 
+}
+
+
+.workspace-ribbon.mod-right .workspace-ribbon-collapse-btn {
+  display: none;
+}
+
+.reading-glasses {display: none;}
+.mod-close-leaf {display: none;}
+
+
+.workspace-ribbon.mod-right {
+  opacity: 1;
+  height: unset;
+  position: absolute;
+  width: unset;
+  top: 66px;
+  z-index: 9;
+  right: 0;
+  background: transparent;
+  border-right: 0;
+  margin-right: 12px;
+}
+
+.mod-right:not(.is-collapsed) ~ .workspace-split.mod-right-split {
+  margin-right: 0;
+}
+
+
+.mod-left:not(.is-collapsed) ~ .workspace-split.mod-right-split {
+  margin-right: 0;
+}
+
+.side-dock-ribbon.mod-right {
+  border-left: 0;
+}
+
+.is-mobile .side-dock-ribbon.mod-right {
+  border-right: 1px solid var(--background-secondary-alt);
+  padding: calc(env(safe-area-inset-top) + 4px) 0
+    calc(env(safe-area-inset-bottom) + 4px) env(safe-area-inset-left);
+}
+
+/* default, collapse and hover colors */
+
+.workspace-ribbon.mod-right .workspace-ribbon-collapse-btn {
+  color: var(--text-muted);
+  background-color: var(--background-secondary);
+}
+.workspace-ribbon.mod-right .workspace-ribbon-collapse-btn:hover {
+  background: var(--background-secondary-alt);
+}
+.workspace-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn {
+  background: var(--background-secondary-alt);
+}
+.workspace-ribbon.mod-right:not(.is-collapsed)
+  .workspace-ribbon-collapse-btn:hover {
+  background: var(--background-secondary);
+}
+
+
+
+
+
+.CodeMirror-vscrollbar, .CodeMirror-hscrollbar, ::-webkit-scrollbar {
+  display: none;
+  width: 1px;
+  height: 1px;
+}
+
+/* auto fades status bar items */
+.status-bar:not(:hover) .status-bar-item {
+  opacity: 0.1;
+  transition: opacity .25s ease-in-out;
+}
+
+.view-header:not(:hover) .view-actions {
+  opacity: 0.1;
+  transition: opacity .25s ease-in-out;
+}
+
+.status-bar {display: none;}
+
+
+
+
